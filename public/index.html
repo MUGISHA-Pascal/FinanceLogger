@@ -8,23 +8,59 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-gray-200">
+  <body class="bg-gray-200 text-xs">
     <section class="flex flex-col justify-center items-center bg-white">
       <h2 class="text-gray-500 font-bold text-2xl m-6">Finance Logger</h2>
+      <ul></ul>
     </section>
-    <section class="pt-6">
-      <form>
-        <label for="type">Type:</label>
-        <select name="type" id="type">
-          <option value="invoice">invoice</option>
-          <option value="payment">payment</option>
-        </select>
-        <label for="person">To/From:</label>
-        <input type="text" id="person" name="person" />
-        <label for="details">Details:</label>
-        <input type="text" id="details" name="details" />
-        <label for="amount">amount:</label>
-        <input type="number" id="amount" name="amount" />
+    <section class="pt-6 flex flex-row items-center justify-center">
+      <form class="flex flex-row space-x-4 items-center justify-center">
+        <div class="flex flex-col space-y-2 w-40">
+          <label for="type" class="font-bold">Type:</label>
+          <select
+            name="type"
+            id="type"
+            class="p-2 rounded-md focus:outline-none"
+          >
+            <option value="invoice">invoice</option>
+            <option value="payment">payment</option>
+          </select>
+        </div>
+        <div class="flex flex-col space-y-2 w-40">
+          <label for="person" class="font-bold">To/From:</label>
+          <input
+            type="text"
+            id="person"
+            name="person"
+            class="p-2 rounded-md focus:outline-none"
+          />
+        </div>
+        <div class="flex flex-col space-y-2 w-40">
+          <label for="details" class="font-bold">Details:</label>
+          <input
+            type="text"
+            id="details"
+            name="details"
+            class="p-2 rounded-md focus:outline-none"
+          />
+        </div>
+        <div class="flex flex-col space-y-2 w-40">
+          <label for="amount" class="font-bold">amount:</label>
+          <input
+            type="number"
+            id="amount"
+            name="amount"
+            class="p-2 rounded-md focus:outline-none"
+          />
+        </div>
+        <div class="pt-6">
+          <button
+            type="submit"
+            class="rounded-xl bg-gray-500 text-xs h-8 pl-4 pr-4 hover:opacity-70 text-white font-bold"
+          >
+            Add
+          </button>
+        </div>
       </form>
     </section>
   </body>
