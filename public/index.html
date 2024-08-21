@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>financelogger</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-200">
+    <section class="flex flex-col justify-center items-center bg-white">
+      <h2 class="text-gray-500 font-bold text-2xl m-6">Finance Logger</h2>
+    </section>
+    <section class="pt-6">
+      <form>
+        <label for="type">Type:</label>
+        <select name="type" id="type">
+          <option value="invoice">invoice</option>
+          <option value="payment">payment</option>
+        </select>
+        <label for="person">To/From:</label>
+        <input type="text" id="person" name="person" />
+        <label for="details">Details:</label>
+        <input type="text" id="details" name="details" />
+        <label for="amount">amount:</label>
+        <input type="number" id="amount" name="amount" />
+      </form>
+    </section>
+  </body>
+</html>
