@@ -1,4 +1,3 @@
-"use strict";
 const form = document.querySelector("form");
 const type = document.querySelector("#type");
 const person = document.querySelector("#person");
@@ -8,3 +7,4 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     // console.log(type.value, person.value, details.value, amount.valueAsNumber);
 });
+export {};
