@@ -7,11 +7,26 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <style>
+      li {
+        padding: 4px;
+        border-radius: 4px;
+        color: rgb(167, 166, 166);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      h4 {
+        color: gray;
+        font-weight: bold;
+      }
+      p {
+        font-size: small;
+      }
+    </style>
   </head>
   <body class="bg-gray-200 text-xs">
-    <section class="flex flex-col justify-center items-center bg-white">
+    <section class="flex flex-col justify-center items-center bg-white pb-4">
       <h2 class="text-gray-500 font-bold text-2xl m-6">Finance Logger</h2>
-      <ul></ul>
+      <ul class="flex flex-col space-y-4"></ul>
     </section>
     <section class="pt-6 flex flex-row items-center justify-center">
       <form class="flex flex-row space-x-4 items-center justify-center">
