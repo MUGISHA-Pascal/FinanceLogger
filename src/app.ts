@@ -7,6 +7,7 @@ import { Invoice } from "./invoice.js";
 import { Payment } from "./payment.js";
 import { hasFormatter } from "./hasFormatter.js";
 import { ListTemplate } from "./listTemplate.js";
+import { Receipt } from "./receipt.js";
 
 const ul = document.querySelector("ul")!;
 const list = new ListTemplate(ul);
@@ -16,8 +17,11 @@ form.addEventListener("submit", (e: Event) => {
   if (type.value === "invoice") {
     const doc = new Invoice(person.value, details.value, amount.valueAsNumber);
     list.render(doc, type.value, "start");
-  } else {
+  } else if (type.value === "payment") {
     const doc = new Payment(person.value, details.value, amount.valueAsNumber);
+    list.render(doc, type.value, "end");
+  } else {
+    const doc = new Receipt(person.value, details.value, amount.valueAsNumber);
     list.render(doc, type.value, "end");
   }
 });
